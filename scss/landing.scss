@@ -1,0 +1,277 @@
+@use './partials/global' as *;
+
+@keyframes full-rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes color-flash {
+    0% {background-color: #393939;}
+    50% {background-color: #5BACC3;}
+    100% {background-color: #393939;}
+}
+@mixin rotating-hover-animation {
+    &:hover ~ .about__img-item {
+        animation: full-rotation 2s linear infinite;
+    }
+}
+
+/*
+ * banner block
+ * ------------------------------------------------
+ */
+
+.banner {
+    background-color: #FFF0ED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+.banner-text {}
+.banner__title {}
+.banner__desc {
+    margin: 2rem 0;
+    width: 22.5rem;
+}
+.banner__img {
+    /* 280px 17.5rem */
+    height: 30rem;
+}
+
+/*
+ * btn block
+ * ------------------------------------------------
+ */
+
+.btn-container {
+    position: relative;
+    display: flex;
+}
+.btn {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.3125rem;
+    
+    width: 12rem;
+    height: 3.5rem;
+    border: 2px solid #393939;
+    background-color: #ffffff00;
+    z-index: 10;
+
+    &:active {
+        transform: translate(0.25rem,0.25rem);
+    }
+    
+    &-background {
+        width: 12rem;
+        height: 3.5rem;
+        background-color: #5BACC3;
+
+        position: absolute;
+        top: 0.25rem;
+        left: 0.25rem;
+    }
+}
+
+/*
+ * product-section block
+ * ------------------------------------------------
+ */
+
+.product-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+}
+
+.product-section__title {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.product-section__content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    margin: 2.5rem 0;
+    padding: 0 6rem;
+}
+
+/*
+ * card block
+ * ------------------------------------------------
+ */
+
+.card {
+    display: block;
+    width: 20.625rem;   /* 330px */
+    height: 27.5rem;    /* 440px */
+    box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.625rem;    /* 10px */
+    margin: 1rem 1rem;
+    background-color: #FFF0ED;
+    /* prevents overflow of white background color from .card__img-div */
+    overflow: hidden;
+}
+
+.card__img-div {
+    background-color: #FFF;
+    padding: 2rem;
+}
+
+.card__img {
+    display: block;
+    margin: auto;
+    height: 15rem;
+}
+
+.card__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8.5rem;
+    padding: 1rem;
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- not used -- */
+/* .card__item-name {
+} */
+
+.card_item-unit {
+    color: #909090;
+}
+
+.price {
+    color:#5BACC3;
+}
+
+.price--size-up {
+    /* 33px */
+    font-size: 2rem;
+}
+
+.view-btn {
+    margin: 2.5rem 0;
+    /* height: 8rem; */
+}
+
+/*
+ * About Section
+ * ------------------------------------------------
+ */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 6rem;
+}
+.about-text {}
+.about__title {}
+.about__desc {
+    margin: 2rem 0;
+    width: 27.5rem;
+}
+.about__icon-set {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.about__icon {
+    width: 2.5rem;
+}
+.about__img-set {
+    position: relative;
+    display: flex;
+}
+.about__img-background {
+    height: 24rem;
+    position: relative;
+    top: 0.75rem;
+    left: 0.75rem;
+
+    @include rotating-hover-animation;
+}
+.about__img-border {
+    height: 24rem;
+    width: 24rem;
+    border: 3px solid #5BACC3;
+    position: absolute;
+    
+    @include rotating-hover-animation;
+}
+.about__img-item {
+    position: absolute;
+    top: calc(50% - 277px / 2);
+    left: calc(50% - 152px / 2);
+
+    &:hover {
+        animation: full-rotation 2s linear infinite;
+    }
+
+}
+
+/*
+ * Discount Section
+ * ------------------------------------------------
+ */
+
+.discount {
+    padding: 5rem 6rem;
+}
+.discount__text {
+    background-color: #393939;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    /* 45px */
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+
+    animation: color-flash 2.5s linear infinite;
+}
+
+/*
+ * Footer Section
+ * ------------------------------------------------
+ */
+
+.footer-section {
+    background-color: #FFF0ED;
+    margin-top: 5rem;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+.footer-subsection {}
+.footer-subsection__title {
+    margin-bottom: 1rem;
+}
+.footer-subsection__content {}
+.footer-subsection__link {}
+
+.social-logo {
+    width: 3rem;    /* 50px */
+}
+
+.footer-logo {
+    position: absolute;
+    opacity: 0.25;
+    width: 75px;
+}
+.footer-logo__1 {
+    top: 1rem;
+    left: -1.5rem;
+}
+.footer-logo__2 {
+    bottom: 1rem;
+    right: -1.5rem;
+}

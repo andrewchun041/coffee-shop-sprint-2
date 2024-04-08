@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-size: 3.75rem;    /* 60px */
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 2rem;    /* 33px */
+    font-weight: 300;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.1rem;    /* 18px */
+    font-weight: 400;
+}
+
+/*
+ * site-header block
+ * ------------------------------------------------
+ */
+
+ .site-header {
+    background-color: #FFF0ED;
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.site-header__logo-link {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    color: black;
+}
+
+.site-header__company-name {
+    display: inline-block;
+    font-size: 3rem;    /* overrides h3 */
+    font-weight: 300;    /* overrides h3 */
+}
+
+.site-header__logo-img {
+    align-self: center;
+    width: 3.125rem;
+}
+
+/*
+ * page-nav block
+ * ------------------------------------------------
+ */
+
+.page-nav {
+    font-size: 1.25rem;
+    width: 22rem;
+    padding-left: 1.25rem;
+}
+
+.page-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-nav a:hover, .page-nav a:active{
+    color: #5BACC3;
+}
+
+.page-nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.page-nav__item {
+    display: inline-block;
+    /* padding: 0em 1.25rem 0 1.25rem; */
+}
+
+.page-nav__item--marked a {
+    color: #5BACC3;
+}
+
+/* -- not used -- */
+/* .page-nav__link {
+} */
+
+
+
+.flexbox-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: 700;
+}

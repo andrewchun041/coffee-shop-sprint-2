@@ -1,0 +1,120 @@
+@use './partials/global' as *;
+
+/*
+* menu-banner block
+* ------------------------------------------------
+*/
+
+.menu-banner {
+    background-image: url("../assets/background/coffee-circle.jpg");
+    width: 100%;
+    /* 700px */
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+
+    /* position: relative; */
+}
+.menu-banner__text-container {
+    position: relative;
+}
+.menu-banner__text {
+    color: #FFF;
+
+    /* 300px */
+    width: 14rem;
+    /* 200px */
+    height: 9rem;
+    border: 3px solid #5BACC3;
+    background-color: #ffffff00;
+    z-index: 10;
+}
+.menu-banner__text-background {
+    /* 300px */
+    width: 14rem;
+    /* 200px */
+    height: 9rem;
+    background-color: #393939;
+
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+}
+
+/*
+ * menu-subnav block
+ * ------------------------------------------------
+ */
+
+.menu-subnav {
+    font-size: 1.3rem;    /* 21px */
+    font-weight: 400;
+    width: 100%;
+    background-color: #393939;
+    text-align: center;
+    padding: 1rem 0; /* 80px or 5rem when one line */
+}
+.menu-subnav a{
+    color:#FFF;
+    text-decoration: none;
+}
+.menu-subnav a:hover, .menu-subnav a:active{
+    color:#727272;
+}
+/* -- not used -- */
+/* .menu-subnav__list {} */
+.menu-subnav__item {
+    display: inline-block;
+    padding: 0em 1.25rem 0 1.25rem;
+    border-left: 0.25rem solid #5BACC3;
+}
+/* -- not used -- */
+/* .menu-subnav__link {} */
+
+/*
+ * menu block
+ * ------------------------------------------------
+ */
+
+.menu {
+    text-align: center;
+}
+
+.menu__item {
+    padding: 1em 0em 2em 0em;
+}
+
+.menu__item--hot-drinks, .menu__item--pastries{
+    background-color: #FFF0ED;
+}
+
+.menu__item--cold-drinks {
+    background-color: #F7F7F7;
+}
+
+.menu__title {
+    margin-bottom: 2rem;
+}
+
+.menu__item-name {
+    margin-top: 1rem;
+}
+
+.menu__item-desc {
+    /* width: 32rem; */
+    width: 38%;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+/*
+ * independent add-ons
+ * ------------------------------------------------
+ */
+
+.price {
+    color:#5BACC3;
+}
+
+.icon {
+    width: 3rem;    /* 50px */
+}
